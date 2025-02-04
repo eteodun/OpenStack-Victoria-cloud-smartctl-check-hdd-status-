@@ -22,8 +22,11 @@ compute-0-14
 
 ## Install smartmontools on each compute
 Copy file installsmart to one of cloud controller 
+
 ceeinfra@infra1:~> chmod +x installsmart
+
 ceeinfra@infra1:~> sudo mkdir /var/log/smartcl
+
 ceeinfra@infra1:~> sudo chown -R ceeinfra:ceeinfra /var/log/smartcl
 
 Copy smartctl.yml to /var/lib/cee/main/system/Cloud_1/orchestrator/ansible/
