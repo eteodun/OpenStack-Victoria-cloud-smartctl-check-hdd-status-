@@ -39,17 +39,9 @@ ansible-playbook -i /var/lib/cee/main/system/Cloud_1/orchestrator/ansible/invent
 
 ## Results 
 Expected result 
+In case that will be found HDD with problems report result will be with failed=1 
 
-
-PLAY RECAP ******************************************************************************************************************************************
-compute-0-10               : ok=2    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0
-compute-0-11               : ok=2    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0
-compute-0-13               : ok=2    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0
-compute-0-14               : ok=2    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0
-compute-0-15               : ok=2    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0
-compute-0-16               : ok=2    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0
-compute-0-17               : ok=2    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0
-compute-0-18               : ok=2    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0
-compute-0-20               : ok=2    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=1  << Has only 1 disk 
-compute-0-21               : ok=2    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0
-compute-0-22               : ok=2    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=1  << Has only 1 disk 
+Cloud 1 
+![Alt text](source/result_1.JPG)
+Cloud 2 
+![Alt text](source/result_2.JPG)
