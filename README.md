@@ -25,12 +25,31 @@ Copy file installsmart to one of cloud controller
 
 ceeinfra@infra1:~> chmod +x installsmart
 
+ceeinfra@infra1:~>./installsmart
+
 ceeinfra@infra1:~> sudo mkdir /var/log/smartcl
 
 ceeinfra@infra1:~> sudo chown -R ceeinfra:ceeinfra /var/log/smartcl
 
 Copy smartctl.yml to /var/lib/cee/main/system/Cloud_1/orchestrator/ansible/
 
+
 ## Run script 
 ansible-playbook -i /var/lib/cee/main/system/Cloud_1/orchestrator/ansible/inventory.ini /var/lib/cee/main/system/Cloud_1/orchestrator/ansible/smartctl.yml
 
+## Results 
+Expected result 
+
+
+PLAY RECAP ******************************************************************************************************************************************
+compute-0-10               : ok=2    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0
+compute-0-11               : ok=2    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0
+compute-0-13               : ok=2    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0
+compute-0-14               : ok=2    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0
+compute-0-15               : ok=2    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0
+compute-0-16               : ok=2    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0
+compute-0-17               : ok=2    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0
+compute-0-18               : ok=2    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0
+compute-0-20               : ok=2    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=1  << Has only 1 disk 
+compute-0-21               : ok=2    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0
+compute-0-22               : ok=2    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=1  << Has only 1 disk 
