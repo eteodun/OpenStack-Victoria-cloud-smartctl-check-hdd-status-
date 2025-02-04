@@ -38,12 +38,12 @@ Copy smartctl.yml to /var/lib/cee/main/system/Cloud_1/orchestrator/ansible/
 ansible-playbook -i /var/lib/cee/main/system/Cloud_1/orchestrator/ansible/inventory.ini /var/lib/cee/main/system/Cloud_1/orchestrator/ansible/smartctl.yml
 
 ## Results 
-Expected result not OK :
+**Expected result not OK **:
 compute-0-16               : ok=2    changed=1    unreachable=0    **failed=1**    skipped=3    rescued=0    ignored=0
 
 Log generated on  : /var/log/smartctl/**smartctl_compute-0-16.log**  // Please see file attached smartctl_compute-0-16.log
 
-Expected result OK 
+**Expected result OK**: 
 
 compute-40                 : ok=2    changed=1    unreachable=0    **failed=0**    skipped=3    rescued=0    ignored=0
 
