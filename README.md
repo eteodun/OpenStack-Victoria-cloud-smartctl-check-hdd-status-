@@ -38,7 +38,8 @@ Copy smartctl.yml to /var/lib/cee/main/system/Cloud_1/orchestrator/ansible/
 ansible-playbook -i /var/lib/cee/main/system/Cloud_1/orchestrator/ansible/inventory.ini /var/lib/cee/main/system/Cloud_1/orchestrator/ansible/smartctl.yml
 
 ## Results 
-Expected result 
+Expected result: 
+
 In case that will be found HDD with problems report result will be with failed=1 
 
 Cloud 1 
