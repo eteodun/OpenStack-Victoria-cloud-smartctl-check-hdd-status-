@@ -1,0 +1,86 @@
+smartctl 7.2 2021-09-14 r5237 [x86_64-linux-5.14.21-150400.24.97-default] (SUSE RPM)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Vendor:               SEAGATE
+Product:              ST1200MM0099
+Revision:             ST36
+Compliance:           SPC-4
+User Capacity:        1,200,243,695,616 bytes [1.20 TB]
+Logical block size:   512 bytes
+Formatted with type 2 protection
+8 bytes of protection information per logical block
+LU is fully provisioned
+Rotation Rate:        10000 rpm
+Form Factor:          2.5 inches
+Logical Unit id:      0x5000c500d39a66d3
+Serial number:        WFK8SSZJ
+Device type:          disk
+Transport protocol:   SAS (SPL-3)
+Local Time is:        Wed Aug 14 11:10:07 2024 CEST
+SMART support is:     Available - device has SMART capability.
+SMART support is:     Enabled
+Temperature Warning:  Disabled or Not Supported
+
+=== START OF READ SMART DATA SECTION ===
+SMART Health Status: OK
+
+Grown defects during certification <not available>
+Total blocks reassigned during format <not available>
+Total new blocks reassigned = 0
+Power on minutes since format <not available>
+Current Drive Temperature:     27 C
+Drive Trip Temperature:        60 C
+
+Accumulated power on time, hours:minutes 17365:56
+Manufactured in week 49 of year 2020
+Specified cycle count over device lifetime:  10000
+Accumulated start-stop cycles:  248
+Specified load-unload count over device lifetime:  300000
+Accumulated load-unload cycles:  1080
+Elements in grown defect list: 0
+
+Vendor (Seagate Cache) information
+  Blocks sent to initiator = 3852718952
+  Blocks received from initiator = 1697650009
+  Blocks read from cache and sent to initiator = 1964740399
+  Number of read and write commands whose size <= segment size = 1864172617
+  Number of read and write commands whose size > segment size = 0
+
+Vendor (Seagate/Hitachi) factory information
+  number of hours powered up = 17365.93
+  number of minutes until next internal SMART test = 38
+
+Error counter log:
+           Errors Corrected by           Total   Correction     Gigabytes    Total
+               ECC          rereads/    errors   algorithm      processed    uncorrected
+           fast | delayed   rewrites  corrected  invocations   [10^9 bytes]  errors
+read:   3239924167        9         0  3239924176          9      19633.794           0
+write:         0        0         0         0          0      93092.379           0
+verify: 455145247        0         0  455145247          0        236.684           0
+
+Non-medium error count:        0
+
+SMART Self-test log
+Num  Test              Status                 segment  LifeTime  LBA_first_err [SK ASC ASQ]
+     Description                              number   (hours)
+# 1  Background short  Completed                  96    6172                 - [-   -    -]
+# 2  Background short  Completed                  96    6148                 - [-   -    -]
+# 3  Background short  Completed                  96    6127                 - [-   -    -]
+# 4  Background short  Completed                  96    6103                 - [-   -    -]
+# 5  Background short  Completed                  96    6079                 - [-   -    -]
+# 6  Background short  Completed                  96    6055                 - [-   -    -]
+# 7  Background short  Completed                  96    6031                 - [-   -    -]
+# 8  Background short  Completed                  96    6007                 - [-   -    -]
+# 9  Background short  Completed                  96    5983                 - [-   -    -]
+#10  Background long   Completed                  96    5968                 - [-   -    -]
+#11  Background short  Completed                  96    5671                 - [-   -    -]
+#12  Background short  Completed                  96    5647                 - [-   -    -]
+#13  Background short  Completed                  96    5623                 - [-   -    -]
+#14  Background short  Completed                  96    5599                 - [-   -    -]
+#15  Background short  Completed                  96    5575                 - [-   -    -]
+#16  Background short  Completed                  96    5551                 - [-   -    -]
+#17  Background short  Completed                  96    5527                 - [-   -    -]
+#18  Background short  Completed                  96    5503                 - [-   -    -]
+#19  Background short  Completed                  96    5479                 - [-   -    -]
+#20  Background short  Completed                  96    5455                 - [-   -    -]
