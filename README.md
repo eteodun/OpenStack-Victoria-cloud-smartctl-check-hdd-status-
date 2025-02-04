@@ -1,4 +1,4 @@
-# OpenStack-Victoria cloud smartctl check hdd status
+# Check hdd status on OpenStack-Victoria cloud 
 Check HDD status cloud computes on openstack Victoria
 
 # Description
