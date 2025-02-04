@@ -4,7 +4,7 @@ Check HDD status cloud computes on openstack Victoria
 # Description
 This ansible script is dedicated to check status of HDD disk with smartmontools on cloud computes and generate logs in case that are found issues
 
-Can be used and has been tested on Openstack Victoria
+Can be used and has been tested on Openstack Victoria. Cand bee added to crontab to run periodicaly 
 
 
 ## Setup and instalation
@@ -38,9 +38,14 @@ Copy smartctl.yml to /var/lib/cee/main/system/Cloud_1/orchestrator/ansible/
 ansible-playbook -i /var/lib/cee/main/system/Cloud_1/orchestrator/ansible/inventory.ini /var/lib/cee/main/system/Cloud_1/orchestrator/ansible/smartctl.yml
 
 ## Results 
-Expected result: 
+Expected result not OK :
+compute-0-16               : ok=2    changed=1    unreachable=0    **failed=1**    skipped=3    rescued=0    ignored=0
 
-In case that will be found HDD with problems report result will be with failed=1 
+Log generated on  : /var/log/smartctl/**smartctl_compute-0-16.log**  // Please see file attached smartctl_compute-0-16.log
+
+Expected result OK 
+
+compute-40                 : ok=2    changed=1    unreachable=0    **failed=0**    skipped=3    rescued=0    ignored=0
 
 Cloud 1 
 ![Alt text](source/result_1.JPG)
