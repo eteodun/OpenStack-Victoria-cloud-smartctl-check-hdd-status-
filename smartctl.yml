@@ -1,0 +1,52 @@
+---
+- name: Run smartctl -H on multiple disks and save results locally if issues are found
+  hosts: all
+  become: yes
+  gather_facts: no
+
+  vars:
+    disks:
+      - /dev/sda
+      - /dev/sdb
+
+  tasks:
+    - name: Run smartctl -H on each disk
+      command: sudo /usr/sbin/smartctl -d scsi -H {{ item }}
+      register: smartctl_outputs
+      ignore_errors: yes
+      with_items: "{{ disks }}"
+      loop_control:
+        label: "{{ item }}"
+
+    - name: Check for issues in smartctl output
+      set_fact:
+        # Determine if any disk reports issues
+        has_issues: "{{ smartctl_outputs.results | selectattr('stdout', 'search', 'FAILED|Error') | list | length > 0 }}"
+
+    - name: Save smartctl output to temporary files on remote host if issues are found
+      copy:
+        content: "{{ item.stdout }}"
+        dest: "/tmp/smartctl_health_{{ inventory_hostname }}_{{ item.item }}.log"
+      when: has_issues
+      with_items: "{{ smartctl_outputs.results }}"
+      loop_control:
+        label: "{{ item.item }}"
+
+    - name: Fetch the smartctl logs from remote host to local if issues are found
+      fetch:
+        src: "/tmp/smartctl_health_{{ inventory_hostname }}_{{ item.item }}.log"
+        dest: "/var/log/smartctl/"
+        flat: yes
+      when: has_issues
+      with_items: "{{ smartctl_outputs.results }}"
+      loop_control:
+        label: "{{ item.item }}"
+
+    - name: Remove the temporary files from remote host
+      file:
+        path: "/tmp/smartctl_health_{{ inventory_hostname }}_{{ item.item }}.log"
+        state: absent
+      when: has_issues
+      with_items: "{{ smartctl_outputs.results }}"
+      loop_control:
+        label: "{{ item.item }}"
