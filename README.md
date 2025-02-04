@@ -1,4 +1,4 @@
-# OpenStack-Victoria-cloud-smartctl-check-hdd-status-
+# OpenStack-Victoria cloud smartctl check hdd status
 Check HDD status cloud computes on openstack Victoria
 
 # Description
@@ -31,6 +31,6 @@ ceeinfra@infra1:~> sudo chown -R ceeinfra:ceeinfra /var/log/smartcl
 
 Copy smartctl.yml to /var/lib/cee/main/system/Cloud_1/orchestrator/ansible/
 
-# Run script 
+## Run script 
 ansible-playbook -i /var/lib/cee/main/system/Cloud_1/orchestrator/ansible/inventory.ini /var/lib/cee/main/system/Cloud_1/orchestrator/ansible/smartctl.yml
 
